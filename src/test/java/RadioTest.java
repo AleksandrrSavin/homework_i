@@ -160,7 +160,7 @@ public class RadioTest {
 
         radio.increaseStationHigher();
 
-        int expected = 9;
+        int expected = 0;
         int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
