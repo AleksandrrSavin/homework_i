@@ -3,6 +3,8 @@ public class Radio {
 
     private int currentRadioVolume;
 
+    private int quantityRadioStation = 10;
+
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
@@ -11,11 +13,23 @@ public class Radio {
         return currentRadioVolume;
     }
 
+    public int getQuantityRadioStation() {
+        return quantityRadioStation;
+    }
+
+    public Radio(int quantityRadioStation) {
+        this.quantityRadioStation = quantityRadioStation;
+    }
+
+    public Radio() {
+
+    }
+
     public void setCurrentRadioStation(int newCurrentRadioStation) {
         if (newCurrentRadioStation < 0) {
             return;
         }
-        if (newCurrentRadioStation > 9) {
+        if (newCurrentRadioStation > quantityRadioStation - 1) {
             return;
         }
 
@@ -34,10 +48,10 @@ public class Radio {
     }
 
     public void increaseStationHigher() {
-        if (currentRadioStation < 9) {
+        if (currentRadioStation < quantityRadioStation - 1) {
             currentRadioStation = currentRadioStation + 1;
         }
-        if (currentRadioStation == 9) {
+        if (currentRadioStation == quantityRadioStation - 1) {
             currentRadioStation = 0;
         }
     }
@@ -45,6 +59,9 @@ public class Radio {
     public void increaseStationDown() {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
+        }
+        if (currentRadioStation == 0) {
+            currentRadioStation = quantityRadioStation - 1;
         }
     }
 
