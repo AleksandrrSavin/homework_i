@@ -156,11 +156,11 @@ public class RadioTest {
     @Test
     public void shouldIncreaseRadioAboveStationHigher() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(9);
+        radio.setCurrentRadioStation(8);
 
         radio.increaseStationHigher();
 
-        int expected = 0;
+        int expected = 9;
         int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
