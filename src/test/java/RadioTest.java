@@ -178,4 +178,18 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldIncreaseRadioAboveStationLast() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(9);
+
+        radio.increaseStationHigher();
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
+

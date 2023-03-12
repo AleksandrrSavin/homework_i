@@ -34,11 +34,11 @@ public class Radio {
     }
 
     public void increaseStationHigher() {
-        if (currentRadioStation < 9) {
-            currentRadioStation = currentRadioStation + 1;
-        }
-        else if (currentRadioStation == 9) {
+        if (currentRadioStation == 9) {
             currentRadioStation = 0;
+        }
+        else {
+            currentRadioStation = currentRadioStation + 1;
         }
     }
 
