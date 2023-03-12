@@ -36,8 +36,7 @@ public class Radio {
     public void increaseStationHigher() {
         if (currentRadioStation == 9) {
             currentRadioStation = 0;
-        }
-        else {
+        } else {
             currentRadioStation = currentRadioStation + 1;
         }
     }
