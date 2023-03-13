@@ -33,7 +33,7 @@ public class Radio {
         currentRadioVolume = newCurrentRadioVolume;
     }
 
-    public void increaseStationHigher() {
+    public void increaseStation() {
         if (currentRadioStation == 9) {
             currentRadioStation = 0;
         } else {
@@ -41,19 +41,21 @@ public class Radio {
         }
     }
 
-    public void increaseStationDown() {
-        if (currentRadioStation > 0) {
+    public void decreaseStation() {
+        if (currentRadioStation == 0) {
+            currentRadioStation = 9;
+        } else {
             currentRadioStation = currentRadioStation - 1;
         }
     }
 
-    public void increaseVolumeHigher() {
+    public void increaseVolume() {
         if (currentRadioVolume < 100) {
             currentRadioVolume = currentRadioVolume + 1;
         }
     }
 
-    public void increaseVolumeDown() {
+    public void decreaseVolume() {
         if (currentRadioVolume > 0) {
             currentRadioVolume = currentRadioVolume - 1;
         }
